@@ -1,0 +1,36 @@
+.special {
+  color: #ffc100;
+  line-height: 105.5%;
+  font-size: 36px;
+  letter-spacing: 0.01em;
+}
+.untouchable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hidden-heading {
+  color: #181b26;
+  z-index: -1;
+  @media screen and (min-width: 730px) {
+    font-size: 270px;
+  }
+  @extend .untouchable;
+  @apply font-bold text-9xl absolute my-32 md:mt-16;
+}
+.heading {
+  @extend .special;
+  @apply font-bold pt-32 pl-8 text-5xl;
+}
+.heading .green-border::after {
+  content: "";
+  float: left;
+  background: #00ff85;
+  width: 180px;
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 5px;
+}
